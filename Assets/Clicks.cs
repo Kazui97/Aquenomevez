@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Clicks : MonoBehaviour
 {
    public Camera cam;
+   public NavMeshAgent agent;
    
     void Start()
     {
