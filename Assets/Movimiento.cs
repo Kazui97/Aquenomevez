@@ -4,31 +4,34 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    // variable para gestionar la velocidad 
+    private CharacterController controller;
+    public static Vector3 pos;
     public float speed;
-    // variable para establecer un punto de destino
-    Vector3 destino;
+    public float force = 0.0f;
+    public bool  canjump = false;
+
+    private Animator animator;
+
     void Start()
     {
-        //inicialmente el punto de destino de la posicion actual
-        destino = transform.position;
+        controller = GetComponent<CharacterController>();  
+        animator = GetComponentInChildren<Animator>();
     }
-
-
     void Update()
     {
-        //detectamos cuando hacemos clic 
-        if (Input.GetMouseButtonDown(0))
+        if(Input.GetKey("w"))
         {
-            //buscamos la posicion del clic respecto a la escena
-            destino = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //establecemos la z en cero para que no modifique la profundidad  
-            destino.z = 0f;
-        }
-        //movemos el objeto hacia el punto de destino a una velocidad rectificada
-        transform.position = Vector3.MoveTowards(transform.position, destino, speed * Time.deltaTime);
-        //debugea una linea con el trayecto a recorer
-        Debug.DrawLine(transform.position, destino, Color.green);
+            transform.position+=transform.forward *(speed/20);
+            animator.SetFloat("corre", controller.velocity.magnitude);
+        } 
 
+        if(Input.GetKey("s")) transform.position-=transform.forward*(speed/20);
+        if(Input.GetKey("a")) transform.position-=transform.right*(speed/20);
+        if(Input.GetKey("d")) transform.position+=transform.right*(speed/20);
+        if (Input.GetMouseButtonDown(0)){
+            animator.GetBool("ataque");
+        }
+       
     }
+
 }
