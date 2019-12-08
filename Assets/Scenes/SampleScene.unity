@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -506,12 +506,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 711255768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2f45be9ae6020143ae35906090dbe26, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aa4abf56a199ec43bd5327eafed041f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  force: 0
-  canjump: 0
+  movimiento: 1
+  rotacion: 200
+  x: 0
+  y: 0
 --- !u!143 &711255772
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1106,7 +1107,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100078, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
       propertyPath: m_Name
-      value: Skeleton@Skin
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100078, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400078, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1167,7 +1172,7 @@ PrefabInstance:
     - target: {fileID: 9500000, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: bc49e591b89255e4d8771bb074d1a0e5, type: 2}
+      objectReference: {fileID: 9100000, guid: e28423720831f5e4a899fc0e4016e43a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
 --- !u!1 &4013316154932238919 stripped
@@ -1183,12 +1188,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4013316154932238919}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23740375530c5bb478a4fb9f971406fa, type: 3}
+  m_Script: {fileID: 11500000, guid: f161c43bfe9a5804b9ce82aab7b3d6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  vision: 5
+  speed: 0.5
 --- !u!1001 &4808029999276089069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1199,12 +1205,12 @@ PrefabInstance:
     - target: {fileID: 4013316154932238919, guid: 01478485290e97a4680fbc55a7268c4d,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4013316154932238919, guid: 01478485290e97a4680fbc55a7268c4d,
         type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3382248361765886502, guid: 01478485290e97a4680fbc55a7268c4d,
         type: 3}
