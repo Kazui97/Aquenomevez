@@ -1,35 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Movimiento : MonoBehaviour
 {
-    private CharacterController controller;
     public static Vector3 pos;
     public float speed;
     public float force = 0.0f;
     public bool  canjump = false;
-
+   
     private Animator animator;
 
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();  
+    void Awake()
+    {   
         animator = GetComponentInChildren<Animator>();
     }
     void Update()
     {
-        if(Input.GetKey("w"))
+        bool caminar;
+        if (caminar = Input.GetKey(KeyCode.W))
         {
-            transform.position+=transform.forward *(speed/20);
-            animator.SetFloat("corre", controller.velocity.magnitude);
-        } 
+            animator.SetBool("caminar", caminar);
+           // animator.SetFloat("caminarfloat", speed);
+            transform.position+=transform.forward *(speed);
+           
+            
+        }
+        
 
-        if(Input.GetKey("s")) transform.position-=transform.forward*(speed/20);
+        if(Input.GetKey("s")) 
+        {
+            animator.SetFloat("caminarfloat", speed);
+            transform.position -= transform.forward * (speed / 20);
+        }
         if(Input.GetKey("a")) transform.position-=transform.right*(speed/20);
         if(Input.GetKey("d")) transform.position+=transform.right*(speed/20);
-        if (Input.GetMouseButtonDown(0)){
-            animator.GetBool("ataque");
+        if (Input.GetKey(KeyCode.Space)){
+            animator.SetTrigger("atacar");
         }
        
     }

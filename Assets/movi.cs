@@ -23,7 +23,7 @@ public class movi : MonoBehaviour
             //buscamos la posicion del clic respecto a la escena
             destino = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //establecemos la z en cero para que no modifique la profundidad  
-            destino.z = 0f;
+           // destino.z = 0f;
         }
         //movemos el objeto hacia el punto de destino a una velocidad rectificada
         transform.position = Vector3.MoveTowards(transform.position, destino, speed * Time.deltaTime);
