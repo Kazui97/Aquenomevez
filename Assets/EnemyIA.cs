@@ -40,6 +40,7 @@ public class EnemyIA : MonoBehaviour
             if (!(timeOnsight >= 3)) return;
             warning.SetActive(false);
             detect.SetActive(true);
+            SceneManager.LoadScene("escenario1");
             
         }
        
