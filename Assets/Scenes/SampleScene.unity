@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1205,6 +1205,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: e28423720831f5e4a899fc0e4016e43a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
+--- !u!4 &2036283148 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400078, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2036283147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4013316154932238919 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4013316154932238919, guid: 01478485290e97a4680fbc55a7268c4d,
@@ -1218,13 +1224,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4013316154932238919}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f161c43bfe9a5804b9ce82aab7b3d6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vision: 5
   speed: 0.5
+--- !u!114 &4013316154932238921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013316154932238919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d6431f640129d409a9a280cb45316a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sighRange: 0
+  PlayerTransform: {fileID: 2036283148}
 --- !u!1001 &4808029999276089069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1241,6 +1261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 4013316154932238919, guid: 01478485290e97a4680fbc55a7268c4d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3382248361765886502, guid: 01478485290e97a4680fbc55a7268c4d,
         type: 3}
