@@ -14,6 +14,16 @@ public class CodigoBusca : MonoBehaviour
        _EnemyTransform = transform;
    }
 
+    void Start()
+    {
+        
+    }
+
+
+    void Update()
+    {
+        IsLookingThePlayer(PlayerTransform.position);
+    }
 
     private bool IsLookingThePlayer(Vector3 playerposition)
     {
@@ -32,27 +42,21 @@ public class CodigoBusca : MonoBehaviour
 
         if(Physics.Raycast(_EnemyTransform.position + new Vector3(0,1.5f,0),displacement.normalized, out var hit, sighRange, layermask))
         {
+            Debug.DrawRay(_EnemyTransform.position + new Vector3(0, 1.5f, 0), displacement.normalized * hit.distance, Color.red);
+            Debug.Log("Did hit");
 
+
+            if (hit.collider.GetComponent<prueba>())
+            {
+                Debug.DrawRay(_EnemyTransform.position + new Vector3(0, 1.5f, 0), displacement.normalized * hit.distance, Color.red);
+                if(!hit.collider.GetComponent<prueba>())
+                {
+                    Debug.Log("yea");
+                }
+                return true;
+            }
         }
 
     }
-
-
-
-
-
-
-
-
-
-    void Start()
-    {
-        
-    }
-
   
-    void Update()
-    {
-        IsLookingThePlayer(playerposition.position)
-    }
 }
