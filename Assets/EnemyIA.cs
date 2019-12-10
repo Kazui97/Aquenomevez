@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CodigoBusca : MonoBehaviour
+public class EnemyIA : MonoBehaviour
 {
     [SerializeField] private float sighRange = 0;
     [SerializeField] private Transform PlayerTransform;
@@ -79,10 +79,12 @@ public class CodigoBusca : MonoBehaviour
                 if (!hit.collider.GetComponent<prueba>()) return false;
 
                 Debug.DrawRay(enemitransform.position, displacement.normalized * hit.distance, Color.green);
+                Debug.Log("yea");
 
-                return false;
+               
             }
         }
+        return false;
     }
     
 }
