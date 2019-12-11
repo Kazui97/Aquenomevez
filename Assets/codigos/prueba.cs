@@ -11,6 +11,7 @@ public class prueba : MonoBehaviour
     public float rotacion = 200.0f;
     private Animator ani;
     public float x, y;
+    public bool ataque;
     public int contadormoneda;
     public Text monedas;
     public ParticleSystem portal;
@@ -61,10 +62,12 @@ public class prueba : MonoBehaviour
     {
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
+        ataque = Input.GetKey(KeyCode.F);
         transform.Rotate(0, x * Time.deltaTime *rotacion, 0);
         transform.Translate(0, 0, y * Time.deltaTime * movimiento);
         ani.SetFloat("velX", x);
         ani.SetFloat("velY", y);
+        ani.SetBool("ataque",ataque);
         monedas.text = "monedas " + contadormoneda;
         
     }

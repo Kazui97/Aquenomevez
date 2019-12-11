@@ -18663,6 +18663,7 @@ MonoBehaviour:
   rotacion: 200
   x: 0
   y: 0
+  ataque: 0
   contadormoneda: 0
   monedas: {fileID: 280700433}
   portal: {fileID: 10814812}
