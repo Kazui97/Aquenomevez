@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311926, g: 0.38074008, b: 0.35872707, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10155,10 +10155,10 @@ RectTransform:
   m_Father: {fileID: 1351914099}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.7126555}
-  m_AnchorMax: {x: 0.9472105, y: 0.794}
-  m_AnchoredPosition: {x: -0.5700073, y: 0.6000061}
-  m_SizeDelta: {x: -0.5, y: -0.6000004}
+  m_AnchorMin: {x: 0.1, y: 0.097419165}
+  m_AnchorMax: {x: 0.9472105, y: 0.18072058}
+  m_AnchoredPosition: {x: -0.5700073, y: 3}
+  m_SizeDelta: {x: -0.5, y: -1.6000061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267113440
 MonoBehaviour:
@@ -10234,10 +10234,10 @@ RectTransform:
   m_Father: {fileID: 1351914099}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.07146306, y: 0.62700003}
-  m_AnchorMax: {x: 0.47300002, y: 0.674}
-  m_AnchoredPosition: {x: -0.1000061, y: -0.5999985}
-  m_SizeDelta: {x: -3, y: 2}
+  m_AnchorMin: {x: 0.05386449, y: 0.87900007}
+  m_AnchorMax: {x: 0.45157605, y: 0.93243015}
+  m_AnchoredPosition: {x: 1.5, y: 1}
+  m_SizeDelta: {x: 2, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280700433
 MonoBehaviour:
@@ -16798,10 +16798,10 @@ RectTransform:
   m_Father: {fileID: 1351914099}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.388}
-  m_AnchorMax: {x: 0.9472105, y: 0.45667225}
-  m_AnchoredPosition: {x: -0.54000854, y: 1.1500092}
-  m_SizeDelta: {x: -0.44000244, y: 0.3000002}
+  m_AnchorMin: {x: 0.1, y: 0.097419165}
+  m_AnchorMax: {x: 0.9472105, y: 0.18072058}
+  m_AnchoredPosition: {x: -0.539978, y: 4}
+  m_SizeDelta: {x: -0.44000244, y: -8.699997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &781813770
 MonoBehaviour:
@@ -17523,10 +17523,10 @@ RectTransform:
   m_Father: {fileID: 1351914099}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.08947368, y: 0.388}
-  m_AnchorMax: {x: 0.9472105, y: 0.45667225}
-  m_AnchoredPosition: {x: 1.4300003, y: 1.2070007}
-  m_SizeDelta: {x: -4.5, y: 0.36999893}
+  m_AnchorMin: {x: 0.091000006, y: 0.117827326}
+  m_AnchorMax: {x: 0.9472105, y: 0.18072058}
+  m_AnchoredPosition: {x: 0.42999268, y: 1.5}
+  m_SizeDelta: {x: -2.5, y: 4.369995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156610551
 MonoBehaviour:
@@ -25759,6 +25759,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFX3_MagicAura_B_Runic
       objectReference: {fileID: 0}
+    - target: {fileID: 2562241712961991298, guid: 5f1b87f59c79f764ab4c0f9e7a967074,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2562241712961991299, guid: 5f1b87f59c79f764ab4c0f9e7a967074,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25828,11 +25833,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.750001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2562241712961991298, guid: 5f1b87f59c79f764ab4c0f9e7a967074,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2562241712900143783, guid: 5f1b87f59c79f764ab4c0f9e7a967074,
         type: 3}
