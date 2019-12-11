@@ -48,12 +48,14 @@ public class prueba : MonoBehaviour
         if(col.gameObject.tag == "salida")
            {
                Debug.Log("sali");
-                SceneManager.LoadScene("escenario1");
+               SceneManager.LoadScene("escenario1");
                 menfinal.text = "FIN DEL JUEGO ";
-
            }
     }
-
+    
+    
+       
+    
     void Mensaje()
     {
         mens.enabled = false;
