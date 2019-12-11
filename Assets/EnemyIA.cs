@@ -10,6 +10,8 @@ public class EnemyIA : MonoBehaviour
     [SerializeField] private GameObject warning = null;
     [SerializeField] private GameObject detect = null;
     private Transform enemitransform;
+    float vel = 1.5f;
+    
 
     void Awake()
     {
@@ -18,13 +20,24 @@ public class EnemyIA : MonoBehaviour
 
     void Start()
     {
-        
+        StartCoroutine(Cambio());
     }
 
-
+    IEnumerator Cambio()
+    {
+        while (true)
+        {
+            transform.Rotate(0,180,0);
+            yield return new WaitForSeconds(7);
+        }
+        
+        
+    }
     void Update()
     {
         IsLookinThePlayer(PlayerTransform.position);
+
+        transform.position+=transform.forward *(vel * Time.deltaTime);
     }
 
     private float timeOnsight;

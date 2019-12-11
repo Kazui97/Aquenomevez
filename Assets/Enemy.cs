@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         //guardamos la posicion inicial 
         posicioninicial = transform.position;
+        
     }
 
 
