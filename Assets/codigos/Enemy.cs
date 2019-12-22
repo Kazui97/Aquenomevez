@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    
     // variables para gestionar la vision y velocidad 
     public float vision;
     public float speed;
